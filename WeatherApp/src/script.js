@@ -126,16 +126,19 @@ function background(w) {
   } else if (main === "Haze") {
     document.getElementById("body").style.backgroundImage =
       "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXrQ30Et8INm11OwzYbVz4M3awKDmTUVEDkw&usqp=CAU')";
-  } else if (main === "Clouds") {
-    if (description === "broken clouds") {
+  }else if (main === "Clouds") {
+    if (description === "overcast clouds") {
       document.getElementById("body").style.backgroundImage =
         "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm1dbsWAFp1oi7C5zHBl860O7qBmkdYK0Zog&usqp=CAU')";
-    } else if (description === "scattered clouds") {
+    } else if (description === "broken clouds") {
       document.getElementById("body").style.backgroundImage =
         "url('https://thumbs.dreamstime.com/b/sun-hiding-behind-clouds-cloudy-autumn-day-sky-was-threatening-to-rain-couldn-t-seem-make-happen-165695273.jpg')";
     } else if (description === "few clouds") {
       document.getElementById("body").style.backgroundImage =
         "url('https://media.istockphoto.com/photos/the-sun-shining-through-low-cloud-picture-id94499094?b=1&k=20&m=94499094&s=170667a&w=0&h=5O76ulvOycsj_QHNKCZbKxzefIybaZfkrJe9DFKFMrk=')";
+    } else {
+      document.getElementById("body").style.backgroundImage =
+        "url('https://thedestinyformula.com/wp-content/uploads/2018/08/Partly-sunny-weather.jpg')";
     }
   } else if (main === "Rain") {
     if (description == "shower rain") {
