@@ -58,6 +58,7 @@
   /* background-color: rgb(66, 64, 64);
       transition: all;
       transition-duration: 1s; */
+  background-image: linear-gradient(#1f4037, #99f2c8);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
 }
@@ -102,3 +103,15 @@
   color: aquamarine;
   text-shadow: 5px 5px 10px black;
 }
+.temp_content {
+  position: relative;
+}
+/* .faren {
+  position: absolute;
+  left: 0rem;
+  z-index: -1;
+  opacity: 0.2;
+  font-size: 60px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-weight: 1000;
+} */

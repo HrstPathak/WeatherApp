@@ -82,7 +82,7 @@ function getWeatherReport(city) {
 //   const celTemp = document.querySelector(".temp").innerHTML;
 //   const farenhite = (celTemp * (9 / 5) + 32).toFixed(1);
 //   console.log(farenhite);
-//   document.querySelector(".temp").innerHTML = farenhite;
+//   document.querySelector(".faren").innerHTML = farenhite;
 // }
 function showMeTheReport(weather) {
   console.log(weather);
@@ -114,24 +114,41 @@ function showMeTheReport(weather) {
 }
 
 function background(w) {
-  let description = w.weather[0].main;
-  // console.log(description);
-  if (description === "Clear") {
+  // const curTime = `${window.moment(w.dt * 1000).format("hh:mm a")}`;
+  // console.log(curTime);
+
+  let main = w.weather[0].main;
+  let description = w.weather[0].description;
+  // console.log(main);
+  if (main === "Clear") {
     document.getElementById("body").style.backgroundImage =
-      "url('https://ak.picdn.net/shutterstock/videos/1022659633/thumb/1.jpg')";
-  } else if (description === "Haze") {
+      "url('https://images.wallpaperscraft.com/image/single/blue_sky_sun_light_clouds_day_air_48047_1366x768.jpg')";
+  } else if (main === "Haze") {
     document.getElementById("body").style.backgroundImage =
       "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXrQ30Et8INm11OwzYbVz4M3awKDmTUVEDkw&usqp=CAU')";
-  } else if (description === "Clouds") {
-    document.getElementById("body").style.backgroundImage =
-      "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm1dbsWAFp1oi7C5zHBl860O7qBmkdYK0Zog&usqp=CAU')";
-  } else if (description === "Rain") {
-    document.getElementById("body").style.backgroundImage =
-      "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0yD_3NmmpsXV2QjLETZh9lnABbf3BugEoGw&usqp=CAU')";
-  } else if (description === "Snow") {
+  } else if (main === "Clouds") {
+    if (description === "broken clouds") {
+      document.getElementById("body").style.backgroundImage =
+        "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm1dbsWAFp1oi7C5zHBl860O7qBmkdYK0Zog&usqp=CAU')";
+    } else if (description === "scattered clouds") {
+      document.getElementById("body").style.backgroundImage =
+        "url('https://thumbs.dreamstime.com/b/sun-hiding-behind-clouds-cloudy-autumn-day-sky-was-threatening-to-rain-couldn-t-seem-make-happen-165695273.jpg')";
+    } else if (description === "few clouds") {
+      document.getElementById("body").style.backgroundImage =
+        "url('https://media.istockphoto.com/photos/the-sun-shining-through-low-cloud-picture-id94499094?b=1&k=20&m=94499094&s=170667a&w=0&h=5O76ulvOycsj_QHNKCZbKxzefIybaZfkrJe9DFKFMrk=')";
+    }
+  } else if (main === "Rain") {
+    if (description == "shower rain") {
+      document.getElementById("body").style.backgroundImage =
+        "url('https://us.123rf.com/450wm/flynt/flynt1511/flynt151100011/48354992-rain-drops-falling-from-a-black-umbrella-concept-for-bad-weather-winter-or-protection.jpg?ver=6')";
+    } else {
+      document.getElementById("body").style.backgroundImage =
+        "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0yD_3NmmpsXV2QjLETZh9lnABbf3BugEoGw&usqp=CAU')";
+    }
+  } else if (main === "Snow") {
     document.getElementById("body").style.backgroundImage =
       "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_LEBSXwYIIG2c1ccqGPCOaIy20SK8Wmkcxw&usqp=CAU')";
-  } else if (description === "Thunderstorm") {
+  } else if (main === "Thunderstorm") {
     document.getElementById("body").style.backgroundImage =
       "url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpK4hvNmiQPkkCPlF6YRk0UCj03-fDKOBBwA&usqp=CAU')";
   }
