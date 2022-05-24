@@ -52,7 +52,7 @@ const inputValue = document.querySelector("#inputBox");
 function getData() {
   input = inputValue.value;
   console.log(input);
-
+  document.querySelector("#inputBox").value = "";
   getWeatherReport(input);
 }
 
