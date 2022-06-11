@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css"
+    />
+    <title>WEATHER APP</title>
+    <link rel="stylesheet" href="./Style.css" />
+  </head>
+
+  <body id="body">
+    <div class="heading">
+      <img src="http://openweathermap.org/img/wn/02d@2x.png" />
+      <!-- WEATHER APP -->
+      <span class="w">W</span>
+      <span class="w">E</span>
+      <span class="w">A</span>
+      <span class="w">T</span>
+      <span class="w">H</span>
+      <span class="w">E</span>
+      <span class="w">R</span>
+      <span class="w">&nbsp</span>
+      <span class="w">A</span>
+      <span class="w">P</span>
+      <span class="w">P</span>
+
+      <img src="http://openweathermap.org/img/wn/11d@2x.png" />
+    </div>
+    <div class="outer_div">
+      <div class="app-main">
+        <div class="searchinputbox">
+          <input
+            type="text"
+            id="inputBox"
+            class="inputBox"
+            onchange="getData()"
+            placeholder="City name here.."
+          />
+        </div>
+        <div id="weatherBody" class="WeatherBody">
+          <div class="locationDetail">
+            <div class="city"></div>
+            <div class="date"></div>
+          </div>
+          <div class="weather-status">
+            <div onclick="conversion()" class="temp_content">
+              <span class="temp"></span><span class="degree"></span>
+            </div>
+            <div class="min-max"></div>
+          </div>
+          <div class="description"></div>
+          <img src="" class="icon" />
+        </div>
+      </div>
+      <div class="app-main">
+        <div id="weatherBody" class="WeatherBody">
+          <div class="content_div">
+            <div class="content">
+              <i class="fi fi-br-wind" title="WIND SPEED"></i>
+              <span class="wind"></span>
+            </div>
+            <div class="content">
+              <i class="fi fi-rs-humidity" title="HUMIDITY"></i>
+              <span class="humidity"></span>
+            </div>
+            <div class="content">
+              <i class="fi fi-rs-sunrise-alt" title="SUNRISE"></i>
+              <span class="sunrise"></span>
+            </div>
+            <div class="content">
+              <i class="fi fi-rs-sunset" title="SUNSET"></i>
+              <span class="sunset"></span>
+            </div>
+            <div class="content">
+              <i
+                class="fi fi-sr-tire-pressure-warning"
+                title="Ground PRESSURE unit Pascal"
+              ></i>
+              <span class="pressure"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+    integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script src="./script.js"></script>
+</html>
